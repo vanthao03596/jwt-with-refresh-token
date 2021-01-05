@@ -38,7 +38,7 @@ class RefreshToken extends Model
 
     public function isExpired(): bool
     {
-        return $this->expires_at->lte(now()->subMinutes(24*60*7));
+        return $this->expires_at->lte(now());
     }
 
 }
